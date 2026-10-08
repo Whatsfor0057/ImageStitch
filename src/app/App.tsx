@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useMemo, useReducer, useRef, useState } from 'react'
+import { Analytics } from '@vercel/analytics/react'
 import { ImageList } from '../components/ImageList'
 import { LanguageSelector } from '../components/LanguageSelector'
 import { Preview } from '../components/Preview'
@@ -211,6 +212,7 @@ export function App() {
 
   return (
     <div className="app-shell">
+      <Analytics />
       <header className="topbar-shell">
         <div className="topbar">
           <a className="brand" href="/" aria-label={t('app.homeLabel')}>
